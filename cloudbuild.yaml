@@ -36,4 +36,4 @@ availableSecrets:
  - versionName: <Environment>
    env: 'Environment'
 
-SecretEnv: ['Environment']
+secretEnv: ['Environment']
