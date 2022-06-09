@@ -6,7 +6,7 @@ WORKDIR /app
 
 COPY app.py /app/app.py
 
-COPY .env ./
+ENV ENVIRONMENT 'production'
 
 ENTRYPOINT ["python"]
 
