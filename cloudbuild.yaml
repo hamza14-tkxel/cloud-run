@@ -16,7 +16,7 @@ steps:
   - '-t'
   - 'gcr.io/$PROJECT_ID/python-app:$SHORT_SHA'
   - '.'
-  - 'ENV-ARG'
+  - 'build-arg'
   - 'Environment = $$Environment'
 
 # This step pushes the image to Container Registry
