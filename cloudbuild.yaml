@@ -30,7 +30,7 @@ steps:
 
 availableSecrets:
  secretManager:
- - versionName: <Encironment>
+ - versionName: <Environment>
    env: 'Environment'
 
 
