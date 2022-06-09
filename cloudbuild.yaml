@@ -16,6 +16,8 @@ steps:
   - '-t'
   - 'gcr.io/$PROJECT_ID/python-app:$SHORT_SHA'
   - '.'
+  - 'ENV-ARG'
+  - 'Environment = $$Environment'
 
 # This step pushes the image to Container Registry
 # The PROJECT_ID and SHORT_SHA variables are automatically
@@ -25,6 +27,7 @@ steps:
   args:
   - 'push'
   - 'gcr.io/$PROJECT_ID/python-app:$SHORT_SHA'
+ 
 #images:
 #- gcr.io/$PROJECT_ID/python-app
 
@@ -33,4 +36,4 @@ availableSecrets:
  - versionName: <Environment>
    env: 'Environment'
 
-
+SecretEnv: ['Environment']
