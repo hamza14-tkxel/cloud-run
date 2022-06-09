@@ -28,5 +28,9 @@ steps:
 #images:
 #- gcr.io/$PROJECT_ID/python-app
 
-  
+availableSecrets:
+ secretManager:
+ - versionName: <Encironment>
+   env: 'Environment'
+
 
