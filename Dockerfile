@@ -6,8 +6,7 @@ WORKDIR /app
 
 COPY app.py /app/app.py
 
-ARG ENV
-ENV ENVIRONMENT $ENVIRONMENT
+COPY .env ./
 
 ENTRYPOINT ["python"]
 
