@@ -9,8 +9,6 @@ steps:
   
 # This step builds the container image.
 - name: 'gcr.io/cloud-builders/docker'
-  entrypoint: /bin/bash
-  id: Build
   args: ['build', '-t', 'us-east4-docker.pkr.dev/architect-poc-322500/python-app:python-application' , '.']
 
 # This step pushes the image to Container Registry
