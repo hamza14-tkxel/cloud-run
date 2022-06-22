@@ -14,7 +14,7 @@ steps:
   args:
   - 'build'
   - '-t'
-  - 'gcr.io/architect-poc-322500/python-app:$SHORT_SHA'
+  - 'gcr.io/architect-poc-322500/python-app:$SHORT_SHAA'
   - '.'
 
 # This step pushes the image to Container Registry
