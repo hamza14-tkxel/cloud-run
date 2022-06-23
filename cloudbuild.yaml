@@ -16,6 +16,10 @@ steps:
 # replaced by Cloud Build.
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push', 'gcr.io/$PROJECT_ID/python-application:latest']
+  
+- name: 'gcr.io/cloud-builders/gcloud'
+  args: ['run', 'deploy', 'python-application', '--image', 'gcr.io/$PROJECT_ID/python-application:latest', '--region', 'us-east4', '--platform', 'managed', "--allow-unauthenticated"]
+
 
 
 images:
