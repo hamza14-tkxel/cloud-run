@@ -24,7 +24,6 @@ steps:
   args: ['run', 'deploy', 'python-application', '--image', 'gcr.io/$PROJECT_ID/python-application:latest', '--region', 'us-east4', '--platform', 'managed', "--allow-unauthenticated"]
 
 
-
 images:
 - 'gcr.io/$PROJECT_ID/python-application:latest'
 
