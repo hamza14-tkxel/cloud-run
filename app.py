@@ -4,7 +4,7 @@ app = Flask('hello-cloudbuild')
 
 @app.route('/')
 def hello():
-  print(os.environ))
+  print(os.environ)
   return 'Hello World!\n'
 
 
