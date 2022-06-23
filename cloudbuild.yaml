@@ -16,7 +16,8 @@ steps:
 # replaced by Cloud Build.
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push', 'us-east4-docker.pkr.dev/architect-poc-322500/python-app:python-application']
- 
+
+
 #images:
 #- gcr.io/architect-poc-322500/python-application
 
