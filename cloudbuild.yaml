@@ -10,6 +10,7 @@ steps:
 # This step builds the container image.
 - name: 'gcr.io/cloud-builders/docker'
   args: ['build', '-t', 'gcr.io/$PROJECT_ID/python-application:latest' , '.']
+  secretEnv: ['ENVIRONMENT']
 
 
 # This step pushes the image to Container Registry
@@ -21,9 +22,11 @@ steps:
 - name: 'gcr.io/cloud-builders/gcloud'
   args: ['run', 'deploy', 'python-application', '--image', 'gcr.io/$PROJECT_ID/python-application:latest', '--region', 'us-east4', '--platform', 'managed', "--allow-unauthenticated"]
   
-options:
-  env:
-    - 'ENV=$ENV'
+
+availableSecrets:
+  secretManager:
+  - versionName: projects/707378684652/secrets/ENVIRONMENT
+    env: 'ENVIRONMENT'
 
 images:
 - 'gcr.io/$PROJECT_ID/python-application:latest'
