@@ -4,8 +4,8 @@ app = Flask('hello-cloudbuild')
 
 @app.route('/')
 def hello():
-  environment = str(os.environ.get('ENVIRONMENT'))
-  return "Hello World!\n" + environment
+  environment = str(os.environ)
+  return environment
 
 
 if __name__ == '__main__':
