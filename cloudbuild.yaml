@@ -9,16 +9,16 @@ steps:
   
 # This step builds the container image.
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'us-east4-docker.pkr.dev/architect-poc-322500/python-app:python-application' , '.']
+  args: ['build', '-t', 'gcr.io/$PROJECT_ID/python-application:latest' , '.']
 
 # This step pushes the image to Container Registry
 # The PROJECT_ID and SHORT_SHA variables are automatically
 # replaced by Cloud Build.
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'gcr.io/$PROJECT_ID/python-app:python-application']
+  args: ['push', 'gcr.io/$PROJECT_ID/python-application:latest']
 
 
-#images:
-#- gcr.io/architect-poc-322500/python-application
+images:
+- 'gcr.io/$PROJECT_ID/python-application:latest'
 
 
