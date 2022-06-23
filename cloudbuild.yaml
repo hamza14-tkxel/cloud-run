@@ -23,12 +23,12 @@ steps:
   args: ['run', 'deploy', 'python-application', '--image', 'gcr.io/$PROJECT_ID/python-application:latest', '--region', 'us-east4', '--platform', 'managed', "--allow-unauthenticated"]
   
 
-availableSecrets:
-  secretManager:
-  - versionName: projects/707378684652/secrets/ENVIRONMENT
-    env: 'ENVIRONMENT'
+
 
 images:
 - 'gcr.io/$PROJECT_ID/python-application:latest'
 
-
+availableSecrets:
+  secretManager:
+  - versionName: "projects/$PROJECT_ID/secrets/ENVIRONMENT"
+    env: 'ENVIRONMENT'
