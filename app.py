@@ -1,5 +1,5 @@
 from flask import Flask
-import os
+#import os
 app = Flask('hello-cloudbuild')
 
 @app.route('/')
