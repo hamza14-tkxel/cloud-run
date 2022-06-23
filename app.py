@@ -1,10 +1,10 @@
 from flask import Flask
-#import os
+import os
 app = Flask('hello-cloudbuild')
 
 @app.route('/')
 def hello():
-  return "Hello World!\n"
+  return "Hello World!\n" + os.environ.get('ENVIRONMENT')
 
 
 if __name__ == '__main__':
